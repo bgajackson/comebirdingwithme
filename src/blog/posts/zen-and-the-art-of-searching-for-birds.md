@@ -6,6 +6,7 @@ location: ""
 species: ""
 image: /images/blog/zen-and-the-art-of-searching-for-birds/5.14.22-TTP-YELLOW-WARBLER.jpg
 pinned: true
+pinOrder: 1
 ---
 
 <figure>
