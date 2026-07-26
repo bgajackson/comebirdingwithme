@@ -1,10 +1,12 @@
 ---
 layout: layouts/post.njk
-title: "My journey into photography"
+title: My journey into photography
 date: 2022-09-16T09:59:51
-location: "" # TODO: fill in
-species: "" # TODO: fill in
+location: ""
+species: ""
 image: /images/blog/my-journey-into-photography/2022.7.10-CCSP-BLACKBURNIAN-WARBLER-1.jpg
+pinned: true
+pinOrder: 2
 ---
 
 <img src="/images/blog/my-journey-into-photography/2022.7.10-CCSP-BLACKBURNIAN-WARBLER-1.jpg" alt=""/>
