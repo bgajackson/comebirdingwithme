@@ -1,0 +1,16 @@
+---
+layout: layouts/post.njk
+title: "How to start"
+date: 2022-01-21T20:42:06
+location: "" # TODO: fill in
+species: "" # TODO: fill in
+image: /images/blog/how-to-start/First-Bird-Pic-Mallard.jpg
+---
+
+<figure>
+  <img src="/images/blog/how-to-start/First-Bird-Pic-Mallard.jpg" alt="My first picture taken while birding in February 2020. This Mallard launched my career of terrible bird photographs.">
+  <figcaption>My first picture taken while birding in February 2020. This Mallard launched my career of terrible bird photographs.</figcaption>
+</figure> 
+  
+
+<p>To be fair, I had a head start. I’ve been a lifelong hunter (a topic for another day!), so I had acquired some skills and tools in the pursuit of wildlife. Namely my ability to “tune in” to the nature around me, and a pair of really good binoculars. However, the first day of my birding hobby was very simple, and required neither of those aids. On day one, I walked to the train on my commute like I always do, and simply took note of the birds I saw. A Northern Cardinal first, followed by a Robin, then some crows, a bunch of seagulls on a building opposite the train station, some sparrows flying around the inside of the Quincy train station, and a few Rock Pigeons on my subway platform. Boom... 6 species. Of course I didn’t know that “sparrow” is actually a pretty broad family of birds (well 2 families actually), and there is actually no such species called a “seagull”.&nbsp;</p><p>The next step was to buy a field guide, because I remember from 7th grade that this is the next step for identifying things in nature. I bought Kaufman’s “Field Guide to Birds of North America” online and waited for it to arrive. In the meantime I figured there might be an app for birding and OH MY GOD are there apps for birding! I hate to admit it that my copy of “Field Guide to Birds of North America” got much less attention than it should have. After reading app reviews and looking for something suited for a novice, I settled on “Merlin”, offered by the Cornell lab of Ornithology, and quickly found the sister app, eBird.&nbsp;</p><p>I can’t over-exaggerate the effect that discovering eBird did to me, and I’ll give it a full post in the future to describe it, but it changed everything. In short it gave me a place to keep a checklist of what I was seeing, and it gave me a map to see “hotspots” and other locations where other birders were seeing birds. These maps fundamentally changed the way I looked at my own neighborhood. It was no longer streets with names, but river basins, parks, and marshes. I lived in a fantastic town for birding (Quincy, MA), and hadn’t even realized it. It took me about 5 minutes to drive to a park that over 190 species had been spotted at. Next thing you know I was taking binoculars to work with me in Boston to look at birds on the waterfront during my lunch break. What a dork!&nbsp;&nbsp;</p><p>So how to start? Look out the window. Walk to the train. Take your dog for a walk. The birds are out there right now, waiting for you. The apps are free(ish), but binoculars will become critical pretty quick. Especially if you want to be able to tell the two families of Sparrow apart, or determine what kind of “Seagull” you’re looking at (Herring, Ring-billed, Black-backed, Iceland, Thayers, just to name a few).</p>
