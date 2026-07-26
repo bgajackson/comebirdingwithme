@@ -7,22 +7,18 @@
 #   Then visit http://localhost:8080/admin/
 #   local_backend below makes the CMS write directly to your files on disk.
 #
-# GOING LIVE (weekend 3, once deployed to Cloudflare Pages):
-#   1. Update the `repo` line below to "your-github-username/comebirdingwithme"
-#   2. Update `base_url` below to your real site URL
-#   3. Follow the GitHub OAuth setup steps in README.md
-#   Once both are in place, the same /admin/ page will use real GitHub login
-#   instead of the local backend, whether visited locally or on the live site
-#   (Decap automatically prefers the local backend only when running on
+# ON THE LIVE SITE:
+#   The same /admin/ page uses real GitHub login instead (Decap
+#   automatically prefers the local backend only when running on
 #   localhost, so this file doesn't need to change between the two).
 
 local_backend: true
 
 backend:
   name: github
-  repo: your-github-username/comebirdingwithme # TODO: update before going live
+  repo: bgajackson/comebirdingwithme
   branch: main
-  base_url: https://your-site.pages.dev # TODO: update before going live
+  base_url: https://comebirdingwithme.reynolds-jack.workers.dev
   auth_endpoint: api/auth
 
 media_folder: "src/images/uploads"
