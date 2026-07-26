@@ -1,9 +1,36 @@
-// GET /api/auth/callback
-// GitHub redirects here after login. Exchanges the code for an access
-// token, then hands it back to the Decap CMS popup window via postMessage.
-export async function onRequestGet(context) {
-  const { env, request } = context;
-  const url = new URL(request.url);
+// This Worker does two things:
+// 1. Handles GitHub OAuth login for Decap CMS, at /api/auth and /api/auth/callback
+// 2. Serves the built static site (from _site) for every other request
+
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+
+    if (url.pathname === "/api/auth") {
+      return handleAuthStart(url, env);
+    }
+
+    if (url.pathname === "/api/auth/callback") {
+      return handleAuthCallback(url, env);
+    }
+
+    // Everything else: serve the static site
+    return env.ASSETS.fetch(request);
+  },
+};
+
+function handleAuthStart(url, env) {
+  const redirectUri = `${url.origin}/api/auth/callback`;
+
+  const authUrl = new URL("https://github.com/login/oauth/authorize");
+  authUrl.searchParams.set("client_id", env.GITHUB_CLIENT_ID);
+  authUrl.searchParams.set("redirect_uri", redirectUri);
+  authUrl.searchParams.set("scope", "repo");
+
+  return Response.redirect(authUrl.toString(), 302);
+}
+
+async function handleAuthCallback(url, env) {
   const code = url.searchParams.get("code");
 
   if (!code) {
