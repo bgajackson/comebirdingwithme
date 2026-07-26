@@ -14,7 +14,7 @@ header_on_photo: true
     <h2>Recent Posts</h2>
   </div>
   <div class="entry-grid">
-    {% for post in collections.posts | reverse | head(6) %}
+    {% for post in collections.posts | pinnedFirst | head(6) %}
       <a class="log-card" href="{{ post.url }}">
         {% if post.data.image %}<img src="{{ post.data.image }}" alt="{{ post.data.title }}">{% endif %}
         <p class="meta"><span>{{ post.data.date | readableDate }}</span></p>

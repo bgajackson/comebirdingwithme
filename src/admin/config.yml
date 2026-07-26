@@ -37,6 +37,8 @@ collections:
       - { label: "Location", name: "location", widget: "string", required: false }
       - { label: "Species", name: "species", widget: "string", required: false }
       - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Pin to homepage", name: "pinned", widget: "boolean", default: false, hint: "Pinned posts always show first on the homepage, regardless of date." }
+      - { label: "Pin order", name: "pinOrder", widget: "number", required: false, hint: "Only matters if you pin more than one post — lower numbers show first among pinned posts." }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "photos"

@@ -33,6 +33,17 @@ module.exports = function (eleventyConfig) {
     return arr.slice(0, n);
   });
 
+  // Puts any post/photo with `pinned: true` in its front matter first,
+  // ordered by `pinOrder` (lower = earlier; unset counts as last among
+  // pinned items). Everything else keeps its existing order after that.
+  eleventyConfig.addFilter("pinnedFirst", (items) => {
+    if (!Array.isArray(items)) return items;
+    const pinned = items.filter((i) => i.data.pinned);
+    const rest = items.filter((i) => !i.data.pinned);
+    pinned.sort((a, b) => (a.data.pinOrder ?? 999) - (b.data.pinOrder ?? 999));
+    return [...pinned, ...rest];
+  });
+
   return {
     dir: {
       input: "src",
