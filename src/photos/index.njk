@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+title: Gallery
+permalink: /photos/
+---
+<div class="wrap">
+  <div class="section-title">
+    <h2>Gallery</h2>
+  </div>
+  <div class="entry-grid">
+    {% for photo in collections.photos %}
+      <a class="log-card" href="{{ photo.url }}">
+        {% if photo.data.image %}<img src="{{ photo.data.image }}" alt="{{ photo.data.title }}">{% endif %}
+        <p class="meta"><span>{{ photo.data.date | readableDate }}</span>{% if photo.data.species %}<span>{{ photo.data.species }}</span>{% endif %}</p>
+        <h3>{{ photo.data.title }}</h3>
+      </a>
+    {% else %}
+      <p class="empty-state">No photos yet. First one coming soon.</p>
+    {% endfor %}
+  </div>
+</div>

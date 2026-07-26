@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+title: null
+header_on_photo: true
+---
+<section class="hero">
+  <div class="hero-content">
+    <h1>Thoughts on Birding &amp; Life</h1>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="section-title">
+    <h2>Recent Posts</h2>
+  </div>
+  <div class="entry-grid">
+    {% for post in collections.posts | reverse | head(6) %}
+      <a class="log-card" href="{{ post.url }}">
+        {% if post.data.image %}<img src="{{ post.data.image }}" alt="{{ post.data.title }}">{% endif %}
+        <p class="meta"><span>{{ post.data.date | readableDate }}</span></p>
+        <h3>{{ post.data.title }}</h3>
+      </a>
+    {% else %}
+      <p class="empty-state">No posts yet.</p>
+    {% endfor %}
+  </div>
+</div>

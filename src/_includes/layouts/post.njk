@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+---
+<article class="article">
+  <div class="wrap">
+    <h1>{{ title }}</h1>
+    <div class="field-meta">
+      <span>{{ date | readableDate }}</span>
+      {% if location %}<span>{{ location }}</span>{% endif %}
+      {% if species %}<span>{{ species }}</span>{% endif %}
+    </div>
+    <div class="article-body">
+      {{ content | safe }}
+    </div>
+  </div>
+</article>

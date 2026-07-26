@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+title: Blog
+permalink: /blog/
+---
+<div class="wrap">
+  <div class="section-title">
+    <h2>Blog</h2>
+  </div>
+  <div class="entry-grid">
+    {% for post in collections.posts %}
+      <a class="log-card" href="{{ post.url }}">
+        {% if post.data.image %}<img src="{{ post.data.image }}" alt="{{ post.data.title }}">{% endif %}
+        <p class="meta"><span>{{ post.data.date | readableDate }}</span>{% if post.data.location %}<span>{{ post.data.location }}</span>{% endif %}</p>
+        <h3>{{ post.data.title }}</h3>
+      </a>
+    {% else %}
+      <p class="empty-state">No posts yet. First one coming soon.</p>
+    {% endfor %}
+  </div>
+</div>

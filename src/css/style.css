@@ -1,0 +1,300 @@
+/* ==========================================================================
+   Come Birding With Me — design tokens
+   Monochrome palette: the photography supplies all the color.
+   ========================================================================== */
+
+:root {
+  --ink: #1a1a1a;
+  --ink-soft: #6b6b6b;
+  --paper: #ffffff;
+  --paper-warm: #faf9f6;
+  --line: #e3e0d8;
+
+  --font-display: "Quicksand", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --max-width: 1040px;
+  --radius: 4px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+a { color: inherit; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ------------------------- Header / nav ------------------------- */
+
+.site-header {
+  background: var(--paper);
+  border-bottom: 1px solid transparent;
+}
+
+.site-header.on-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background: transparent;
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.brand {
+  color: var(--ink);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  border-bottom-color: var(--ink);
+}
+
+.site-nav .icon {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+}
+
+.site-nav .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------------------------ Hero ------------------------------ */
+
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  background-image: url('/images/hero.webp'), linear-gradient(160deg, #f4b672 0%, #ec8a63 35%, #8a6a86 70%, #33324a 100%);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.15) 35%, rgba(255,255,255,0.3) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 620px;
+  padding: 16vh 1.5rem 3rem;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  line-height: 1.15;
+  margin: 0 0 2rem;
+  color: var(--ink);
+}
+
+.subscribe-box .label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0 0 0.4rem;
+}
+
+.subscribe-box .sub {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin: 0 0 1.25rem;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.subscribe-form input[type="email"] {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.9);
+  min-width: 240px;
+  flex: 1;
+}
+
+.subscribe-form button {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: var(--paper);
+  cursor: pointer;
+}
+
+/* --------------------------- Section titles --------------------------- */
+
+.section-title {
+  margin: 3.5rem 0 1.75rem;
+}
+
+.section-title h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* ------------------------------ Cards ------------------------------ */
+
+.entry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.log-card {
+  text-decoration: none;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+}
+
+.log-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius);
+}
+
+.log-card .meta {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: 0.9rem 0 0.3rem;
+}
+
+.log-card .meta span + span::before {
+  content: " · ";
+}
+
+.log-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* ------------------------------ Article ------------------------------ */
+
+.article {
+  padding: 3rem 0 5rem;
+}
+
+.article h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin: 0 0 1rem;
+}
+
+.article .field-meta {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-bottom: 2rem;
+}
+
+.article img {
+  max-width: 100%;
+  border-radius: var(--radius);
+}
+
+.article-body p {
+  margin: 0 0 1.2rem;
+}
+
+/* ------------------------------ Footer ------------------------------ */
+
+.site-footer {
+  background: var(--paper-warm);
+  color: var(--ink-soft);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  font-size: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+/* ------------------------------ Utility ------------------------------ */
+
+.empty-state {
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  color: var(--ink-soft);
+}
