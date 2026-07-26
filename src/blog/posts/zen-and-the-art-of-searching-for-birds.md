@@ -1,10 +1,11 @@
 ---
 layout: layouts/post.njk
-title: "Zen and the Art of Searching for Birds"
+title: Zen and the Art of Searching for Birds
 date: 2023-06-02T10:22:58
-location: "" # TODO: fill in
-species: "" # TODO: fill in
+location: ""
+species: ""
 image: /images/blog/zen-and-the-art-of-searching-for-birds/5.14.22-TTP-YELLOW-WARBLER.jpg
+pinned: true
 ---
 
 <figure>
